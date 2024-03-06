@@ -15,6 +15,7 @@ fun MovieDetails(movie: Movie) {
         Text(text = "Director: ${movie.director}")
         Text(text = "Released: ${movie.year}")
         Text(text = "Genre: ${movie.genre}")
+        Text(text = "Actors: ${movie.actors}")
         Text(text = "Rating: ${movie.rating}")
         Divider(modifier = Modifier.padding(3.dp))
         Text(text = "Plot: ${movie.plot}")
