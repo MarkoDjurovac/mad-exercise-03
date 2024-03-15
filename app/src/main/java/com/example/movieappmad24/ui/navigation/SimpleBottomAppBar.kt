@@ -4,7 +4,9 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
+import androidx.compose.material3.NavigationBarDefaults
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -12,7 +14,10 @@ import androidx.navigation.NavController
 
 @Composable
 fun SimpleBottomAppBar(navController: NavController) {
-    NavigationBar {
+    NavigationBar(
+        containerColor = MaterialTheme.colorScheme.primaryContainer,
+        contentColor = MaterialTheme.colorScheme.primary,
+    ) {
         val items = listOf("Home", "Watchlist")
         items.forEach { item ->
             NavigationBarItem(

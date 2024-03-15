@@ -13,13 +13,13 @@ import com.example.movieappmad24.ui.widgets.ImageCarousel
 import com.example.movieappmad24.ui.movie.MovieRow
 import com.example.movieappmad24.ui.navigation.SimpleBottomAppBar
 import com.example.movieappmad24.ui.navigation.SimpleTopAppBar
-import com.example.movieappmad24.models.getMovieById
+import com.example.movieappmad24.models.getMovies
 
 @Composable
 fun DetailScreen(movieId: String?, navController: NavController) {
-    if( movieId != null) {
-        val movie = getMovieById(movieId);
-        if(movie != null) {
+    if (movieId != null) {
+        val movie = getMovies().find { it.id == movieId }
+        if (movie != null) {
             Scaffold(
                 topBar = { SimpleTopAppBar(
                     title = movie.title,

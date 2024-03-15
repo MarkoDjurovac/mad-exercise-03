@@ -10,7 +10,8 @@ data class Movie(
     val plot: String,
     val images: List<String>,
     val trailer: String,
-    val rating: String)
+    val rating: String
+)
 
 fun getMovies(): List<Movie> {
     return listOf(
@@ -140,8 +141,4 @@ fun getMovies(): List<Movie> {
         trailer = "trailer_placeholder",
         rating = "9.5")
     )
-}
-
-fun getMovieById(movieId: String): Movie? {
-    return getMovies().find { it.id == movieId }
 }

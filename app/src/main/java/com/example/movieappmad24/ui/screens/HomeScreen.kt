@@ -17,7 +17,7 @@ import com.example.movieappmad24.models.getMovies
 fun HomeScreen(navController: NavController) {
     Scaffold(
         topBar = { SimpleTopAppBar() },
-        bottomBar = { SimpleBottomAppBar(navController) }
+        bottomBar = { SimpleBottomAppBar(navController)}
     ) { paddingValues ->
         Surface(
             modifier = Modifier.fillMaxSize().padding(paddingValues),
