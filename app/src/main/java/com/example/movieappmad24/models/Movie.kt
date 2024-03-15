@@ -141,3 +141,7 @@ fun getMovies(): List<Movie> {
         rating = "9.5")
     )
 }
+
+fun getMovieById(movieId: String): Movie? {
+    return getMovies().find { it.id == movieId }
+}

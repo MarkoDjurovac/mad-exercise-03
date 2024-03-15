@@ -1,4 +1,4 @@
-package com.example.movieappmad24.composables
+package com.example.movieappmad24.ui.icons
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize

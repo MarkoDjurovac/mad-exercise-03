@@ -1,4 +1,4 @@
-package com.example.movieappmad24.composables
+package com.example.movieappmad24.ui.movie
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding

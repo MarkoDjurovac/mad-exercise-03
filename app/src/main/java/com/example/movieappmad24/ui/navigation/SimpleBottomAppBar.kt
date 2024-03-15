@@ -1,4 +1,4 @@
-package com.example.movieappmad24.composables
+package com.example.movieappmad24.ui.navigation
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
@@ -8,9 +8,10 @@ import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.navigation.NavController
 
 @Composable
-fun BottomNavigationBar() {
+fun SimpleBottomAppBar(navController: NavController) {
     NavigationBar {
         val items = listOf("Home", "Watchlist")
         items.forEach { item ->
@@ -22,8 +23,13 @@ fun BottomNavigationBar() {
                     }
                 },
                 label = { Text(item) },
-                selected = item == "Home",
-                onClick = { /*TODO*/ }
+                selected = false,
+                onClick = {
+                    when (item) {
+                        "Home" -> navController.navigate(Screen.Home.route)
+                        "Watchlist" -> navController.navigate(Screen.Watchlist.route)
+                    }
+                }
             )
         }
     }

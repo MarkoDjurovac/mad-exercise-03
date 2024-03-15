@@ -1,4 +1,4 @@
-package com.example.movieappmad24.composables
+package com.example.movieappmad24.ui.icons
 
 import androidx.compose.foundation.clickable
 import androidx.compose.material.icons.Icons
