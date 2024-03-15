@@ -9,8 +9,7 @@ import com.example.movieappmad24.models.getMovies
 import com.example.movieappmad24.ui.navigation.Screen
 
 @Composable
-fun MovieList(movies: List<Movie> = getMovies(), navController: NavController
-) {
+fun MovieList(movies: List<Movie> = getMovies(), navController: NavController) {
     LazyColumn {
         items(movies) { movie ->
             MovieRow(movie) {
